@@ -1,4 +1,5 @@
 import Link from "next/link";
+import BagIcon from "@/app/assets/shopping-bag.svg";
 
 type Routes = {
   link: string;
@@ -32,7 +33,9 @@ export const Header = (): JSX.Element => {
           ))}
         </nav>
         <div></div>
-        <div></div>
+        <div>
+          <BagIcon />
+        </div>
       </div>
     </header>
   );
