@@ -1,32 +1,32 @@
 import Link from "next/link";
 
 type Routes = {
-  code: string;
+  link: string;
   name: string;
 };
 
 const ROUTES: Routes[] = [
   {
-    code: "",
+    link: "",
     name: "Home",
   },
   {
-    code: "men",
+    link: "category/men",
     name: "Men",
   },
   {
-    code: "women",
+    link: "category/women",
     name: "Women",
   },
 ];
 
 export const Header = (): JSX.Element => {
   return (
-    <header>
-      <div>
-        <nav>
+    <header className="w-full flex justify-center">
+      <div className="w-full flex max-w-[1440px]">
+        <nav className="w-full flex gap-[50px]">
           {ROUTES.map((route) => (
-            <Link key={route.name} href={`/${route.code}`}>
+            <Link key={route.name} href={`/${route.link}`}>
               {route.name}
             </Link>
           ))}

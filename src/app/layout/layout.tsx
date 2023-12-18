@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
-import { Header } from "./header";
+import { Header } from "@/app/layout/header";
+import { Footer } from "@/app/layout/footer";
 
 type LayoutProps = {
   children: ReactNode;
@@ -7,10 +8,12 @@ type LayoutProps = {
 
 export const Layout = ({ children }: LayoutProps): JSX.Element => {
   return (
-    <div className="w">
+    <div className="w-full flex flex-col">
       <Header />
-      <main>{children}</main>
-      <div></div>
+      <main className="w-full flex min-h-screen overflow-hidden">
+        {children}
+      </main>
+      <Footer />
     </div>
   );
 };
