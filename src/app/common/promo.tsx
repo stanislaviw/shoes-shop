@@ -6,23 +6,25 @@ type PromoProps = {
   title: string;
   text: string;
   link: string;
-  icon?: ReactNode;
+  icon: ReactNode;
 };
 
 export const Promo = ({ title, text, link, icon }: PromoProps): JSX.Element => {
   const router = useRouter();
 
   return (
-    <section className="w-full flex justify-center">
-      <div className="w-full max-w-[1440px] h-[100%] flex">
-        <div className="flex flex-col gap-[10px] h-full justify-end">
+    <section className="w-full h-full flex justify-center">
+      <div className="w-full py-b-[100px] max-w-[1440px] h-[1000px] flex items-center">
+        <div className="w-full h-full flex flex-col gap-[10px] h-full justify-center">
           <h4 className="w-50 text-black text-4xl font-sans font-extrabold">
             {title}
           </h4>
           <p className="text-black text-2xl font-serif font-medium">{text}</p>
           <Button text="Shop" onClick={() => router.push(link)} />
         </div>
-        <div></div>
+        <div className="w-full h-full flex items-start justify-center">
+          <div className="w-[70%] h-full">{icon}</div>
+        </div>
       </div>
     </section>
   );
