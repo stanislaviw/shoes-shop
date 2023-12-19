@@ -13,15 +13,22 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      fontFamily: {
+        'sans': ['Montserrat', "sans-serif"],
+        'serif': ['Poppins', "serif"],
+      },
       fontSize: {
-        sm: '0.8rem',
+        sm: '25px',
         base: '30px',
         xl: '35px',
         '2xl': '40px',
-        '3xl': '80px',
-        '4xl': '2.441rem',
-        '5xl': '3.052rem',
-      }
+        '3xl': '45px',
+        '4xl': '80px',
+        '5xl': '100px',
+      },
+      colors: {
+        'light-black': '#040404',
+      },
     },
   },
   plugins: [],
