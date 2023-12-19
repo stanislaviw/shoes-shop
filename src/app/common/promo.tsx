@@ -1,5 +1,6 @@
-import Link from "next/link";
 import { ReactNode } from "react";
+import { Button } from "@/app/common/button";
+import { useRouter } from "next/router";
 
 type PromoProps = {
   title: string;
@@ -9,6 +10,8 @@ type PromoProps = {
 };
 
 export const Promo = ({ title, text, link, icon }: PromoProps): JSX.Element => {
+  const router = useRouter();
+
   return (
     <section className="w-full flex justify-center">
       <div className="w-full max-w-[1440px] h-[100%] flex">
@@ -17,9 +20,7 @@ export const Promo = ({ title, text, link, icon }: PromoProps): JSX.Element => {
             {title}
           </h4>
           <p className="text-black text-2xl font-serif font-medium">{text}</p>
-          <Link href={link}>
-            <span>Shop</span>
-          </Link>
+          <Button text="Shop" onClick={() => router.push(link)} />
         </div>
         <div></div>
       </div>

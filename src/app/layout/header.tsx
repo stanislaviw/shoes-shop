@@ -25,8 +25,6 @@ const ROUTES: Routes[] = [
 export const Header = (): JSX.Element => {
   const router = useRouter();
   const { query, asPath } = router;
-  console.log(router);
-  console.log(query);
 
   return (
     <header className="w-full flex justify-center">
