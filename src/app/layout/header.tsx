@@ -1,5 +1,6 @@
 import Link from "next/link";
 import BagIcon from "@/app/assets/shopping-bag.svg";
+import { useRouter } from "next/router";
 
 type Routes = {
   link: string;
@@ -8,20 +9,25 @@ type Routes = {
 
 const ROUTES: Routes[] = [
   {
-    link: "",
+    link: "/",
     name: "Home",
   },
   {
-    link: "category/men",
+    link: "/category/men",
     name: "Men",
   },
   {
-    link: "category/women",
+    link: "/category/women",
     name: "Women",
   },
 ];
 
 export const Header = (): JSX.Element => {
+  const router = useRouter();
+  const { query, asPath } = router;
+  console.log(router);
+  console.log(query);
+
   return (
     <header className="w-full flex justify-center">
       <div className="w-full max-w-[1440px] flex items-center justify-between g-[20px] pt-[20px]">
@@ -29,8 +35,10 @@ export const Header = (): JSX.Element => {
           {ROUTES.map((route) => (
             <Link
               key={route.name}
-              href={`/${route.link}`}
-              className="text-base font-sans font-semibold text-black"
+              href={route.link}
+              className={`text-base font-sans font-semibold text-black border-solid border-black hover:border-b-[4px] ${
+                asPath === route.link && `border-b-[4px]`
+              }`}
             >
               {route.name}
             </Link>
@@ -46,7 +54,7 @@ export const Header = (): JSX.Element => {
           </Link>
         </div>
         <div className="flex-1 flex justify-end">
-          <BagIcon className="cursor-pointer"/>
+          <BagIcon className="cursor-pointer" />
         </div>
       </div>
     </header>
