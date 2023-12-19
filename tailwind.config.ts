@@ -18,7 +18,7 @@ const config: Config = {
         'serif': ['Poppins', "serif"],
       },
       fontSize: {
-        sm: '25px',
+        sm: '28px',
         base: '30px',
         xl: '35px',
         '2xl': '40px',
@@ -28,6 +28,7 @@ const config: Config = {
       },
       colors: {
         'light-black': '#040404',
+        'dark-grey': "#C0BEBE"
       },
     },
   },
