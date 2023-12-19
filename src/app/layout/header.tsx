@@ -34,8 +34,8 @@ export const Header = (): JSX.Element => {
             <Link
               key={route.name}
               href={route.link}
-              className={`text-base font-sans font-semibold text-black border-solid border-black hover:border-b-[4px] ${
-                asPath === route.link && `border-b-[4px]`
+              className={`text-base font-sans font-semibold text-black border-solid border-b-[4px] hover:border-black ${
+                asPath === route.link ? "border-black" : "border-white"
               }`}
             >
               {route.name}
