@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { TermsOfUse } from "./terms-of-use";
+import { TermsOfUse } from "@/app/docs/terms-of-use";
 
 enum DocPages {
   TermOfUse = "tos",
