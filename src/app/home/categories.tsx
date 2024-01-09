@@ -1,12 +1,17 @@
 import Link from "next/link";
 import ArrowIcon from "@/app/assets/arrow.svg";
 
-export const Categories = (): JSX.Element => {
+export const HomeCategories = (): JSX.Element => {
   return (
     <section className="w-full h-full flex justify-center">
-      <div className="w-full py-b-[100px] max-w-[1440px] flex items-center gap-[20px]">
-        <Category title="Men" link="/category/men" />
-        <Category title="Women" link="/category/women" />
+      <div className="w-full pb-[100px] max-w-[1440px] flex flex-col gap-[30px]">
+        <h5 className="w-full text-center text-3xl font-sans font-semibold text-black border-solid">
+          Choose Category:
+        </h5>
+        <div id="home-category" className="w-full flex items-center gap-[20px]">
+          <Category title="Men" link="/category/men" />
+          <Category title="Women" link="/category/women" />
+        </div>
       </div>
     </section>
   );

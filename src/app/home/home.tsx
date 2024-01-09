@@ -1,5 +1,6 @@
 import { Promo } from "@/app/common/promo";
-import { Categories } from "@/app/home/categories";
+import { HomeCategories } from "@/app/home/categories";
+import { HomePlaceholder } from "@/app/home/placeholder";
 import ShoesIcon from "@/app/assets/nike-shoes.svg";
 
 export const Home = (): JSX.Element => {
@@ -11,7 +12,8 @@ export const Home = (): JSX.Element => {
         link="#"
         icon={<ShoesIcon />}
       />
-      <Categories />
+      <HomeCategories />
+      <HomePlaceholder />
     </div>
   );
 };
