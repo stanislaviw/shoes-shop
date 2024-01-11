@@ -5,7 +5,7 @@ export const HomeCategories = (): JSX.Element => {
   return (
     <section className="w-full h-full flex justify-center">
       <div className="w-full pb-[100px] max-w-[1440px] flex flex-col gap-[30px]">
-        <h5 className="w-full text-center text-3xl font-sans font-semibold text-black border-solid">
+        <h5 className="w-full text-center text-3xl font-sans font-semibold text-black">
           Choose Category:
         </h5>
         <div id="home-category" className="w-full flex items-center gap-[20px]">
