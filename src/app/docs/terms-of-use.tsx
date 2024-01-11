@@ -3,7 +3,7 @@ import { TermOfUseType, TERMS_OF_USE_DATA } from "@/constants/constants";
 export const TermsOfUse = (): JSX.Element => {
   return (
     <section className="w-full h-full flex justify-center">
-      <div className="w-full py-b-[100px] max-w-[1440px] flex flex-col gap-[30px] py-[100px]">
+      <div className="w-full max-w-[1440px] flex flex-col gap-[30px] py-[100px]">
         <div className="w-full flex flex-col gap-[10px]">
           <h4 className="text-black text-xl font-sans font-extrabold">
             Terms of Use for Nycs Shoes
