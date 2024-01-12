@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { Button } from "@/app/common/button";
+import { Button } from "@/common/button";
 import { useRouter } from "next/router";
 
 type PromoProps = {

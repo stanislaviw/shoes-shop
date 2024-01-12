@@ -1,4 +1,5 @@
-import { Button } from "@/app/common/button";
+import { Button } from "@/common/button";
+import { Dialog } from "@/common/dialog";
 
 export const HomePlaceholder = (): JSX.Element => {
   return (
@@ -16,6 +17,14 @@ export const HomePlaceholder = (): JSX.Element => {
             type="outline"
             onClick={() => console.log("lol")}
           />
+          <Dialog
+            onClose={() => {
+              console.log("lol");
+            }}
+            isOpen={false}
+          >
+            lolsadfqwerqwer
+          </Dialog>
         </div>
       </div>
     </section>

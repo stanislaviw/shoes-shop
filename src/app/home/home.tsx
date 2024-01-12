@@ -1,4 +1,4 @@
-import { Promo } from "@/app/common/promo";
+import { Promo } from "@/common/promo";
 import { HomeCategories } from "@/app/home/categories";
 import { HomePlaceholder } from "@/app/home/placeholder";
 import ShoesIcon from "@/app/assets/nike-shoes.svg";
