@@ -16,7 +16,7 @@ export const Promo = ({ title, text, link, icon }: PromoProps): JSX.Element => {
     <section className="w-full h-full flex justify-center">
       <div className="w-full py-b-[100px] max-w-[1440px] h-[1000px] flex items-center">
         <div className="w-full h-full flex flex-col gap-[10px] h-full justify-center">
-          <h4 className="w-50 text-black text-4xl font-sans font-extrabold">
+          <h4 className="text-black text-4xl font-sans font-extrabold">
             {title}
           </h4>
           <p className="text-black text-2xl font-serif font-medium">{text}</p>

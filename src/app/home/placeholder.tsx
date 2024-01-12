@@ -1,7 +1,10 @@
 import { Button } from "@/common/button";
 import { Dialog } from "@/common/dialog";
+import { useToggle } from "@/utils/useToggle";
 
 export const HomePlaceholder = (): JSX.Element => {
+  const { value, handleOpen, handleClose } = useToggle();
+
   return (
     <section className="w-full h-full flex justify-center">
       <div className="w-full pb-[100px] max-w-[1440px] h-[1000px] flex flex-col items-center justify-center">
@@ -15,14 +18,9 @@ export const HomePlaceholder = (): JSX.Element => {
           <Button
             text="Join mailing list"
             type="outline"
-            onClick={() => console.log("lol")}
+            onClick={handleOpen}
           />
-          <Dialog
-            onClose={() => {
-              console.log("lol");
-            }}
-            isOpen={false}
-          >
+          <Dialog onClose={handleClose} isOpen={value}>
             lolsadfqwerqwer
           </Dialog>
         </div>
