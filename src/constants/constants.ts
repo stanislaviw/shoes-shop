@@ -24,7 +24,7 @@ export const HELP_LINKS: LinkType[] = [
 
 export const ABOUT_LINKS: LinkType[] = [
     {
-        name: "Blog",
+        name: "Articles",
         link: "/blog",
     },
 ];

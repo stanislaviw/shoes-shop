@@ -21,7 +21,7 @@ export const Footer = (): JSX.Element => {
         <div className="w-full flex justify-between">
           <Item title="My account" links={MY_ACCOUNT_LINKS} />
           <Item title="Help" links={HELP_LINKS} />
-          <Item title="About" links={ABOUT_LINKS} />
+          <Item title="Blog" links={ABOUT_LINKS} />
           <Item title="Legal staff" links={LEGAL_LINKS} />
         </div>
         <div className="w-full flex justify-start flex flex-col gap-[30px]">
