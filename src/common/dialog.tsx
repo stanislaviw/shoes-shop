@@ -24,12 +24,12 @@ export const Dialog = ({
       overlayClassName="fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-50 flex justify-center items-center"
     >
       <button
-        className="absolute top-[10px] right-[10px] pointer"
+        className="absolute top-[15px] right-[15px] pointer"
         onClick={onClose}
       >
         <CloseIcon width={24} height={24} />
       </button>
-      <div>{children}</div>
+      <div className="w-full pt-[50px]">{children}</div>
     </Modal>
   );
 };
