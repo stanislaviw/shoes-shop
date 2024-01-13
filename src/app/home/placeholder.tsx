@@ -1,6 +1,6 @@
 import { Button } from "@/common/button";
-import { Dialog } from "@/common/dialog";
 import { useToggle } from "@/utils/useToggle";
+import { HomeDialog } from "@/app/home/dialog";
 
 export const HomePlaceholder = (): JSX.Element => {
   const { value, handleOpen, handleClose } = useToggle();
@@ -20,9 +20,7 @@ export const HomePlaceholder = (): JSX.Element => {
             type="outline"
             onClick={handleOpen}
           />
-          <Dialog onClose={handleClose} isOpen={value}>
-            lolsadfqwerqwer
-          </Dialog>
+          <HomeDialog handleClose={handleClose} isOpen={value} />
         </div>
       </div>
     </section>
