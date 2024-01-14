@@ -17,13 +17,11 @@ export const HomeDialog = ({
 
   const handleChangeEmail = (event: ChangeEvent<HTMLInputElement>): void => {
     const { value } = event.target;
-
     if (EMAIL_VALIDATION_PATTERN.test(value)) {
       setError(false);
     } else {
       setError(true);
     }
-
     setEmail(value);
   };
 
