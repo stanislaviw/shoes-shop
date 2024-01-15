@@ -1,7 +1,8 @@
 import { Button } from "@/common/button";
 import { Dialog } from "@/common/dialog";
+import { ErrorMessage } from "@/common/error-message";
 import { EMAIL_VALIDATION_PATTERN } from "@/constants/constants";
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 
 type HomeDialog = {
   handleClose: () => void;
@@ -25,6 +26,11 @@ export const HomeDialog = ({
     setEmail(value);
   };
 
+  useEffect(() => {
+    setEmail("");
+    setError(false);
+  }, []);
+
   return (
     <Dialog onClose={handleClose} isOpen={isOpen}>
       <div className="w-[550px]">
@@ -33,14 +39,16 @@ export const HomeDialog = ({
             In order to subscribe, you need to enter your email.
           </label>
           <input
-            className="bg-white text-black border-[3px] border-black w-full text-base font-serif font-medium rounded-xl py-4 px-5"
+            className={`bg-white text-black border-[3px] w-full text-base font-serif font-medium rounded-xl py-4 px-5 ${
+              error ? "border-dark-red" : "border-black"
+            }`}
             id="email"
             type="text"
             placeholder="Enter email..."
             value={email}
             onChange={handleChangeEmail}
           />
-          {error && <span>lol</span>}
+          {error && <ErrorMessage>Email must be an email </ErrorMessage>}
           <Button
             onClick={() => console.log("lol")}
             text="Subscribe"

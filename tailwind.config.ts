@@ -30,7 +30,8 @@ const config: Config = {
       colors: {
         'light-black': '#040404',
         "dark-black": "#040404d9",
-        'dark-grey': "#C0BEBE"
+        'dark-grey': "#c0bebe",
+        'dark-red': "#DC143C",
       },
     },
   },
