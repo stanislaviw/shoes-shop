@@ -1,5 +1,7 @@
+import { ReactNode } from "react";
+
 type ButtonProps = {
-  text: string;
+  children: ReactNode;
   onClick: () => void;
   type: "classic" | "outline";
   disabled?: boolean;
@@ -11,7 +13,7 @@ const OUTLINE_BUTTON_STYLES: string =
   "bg-white hover:border-dark-black text-black border-[3px] border-black py-4 disabled:cursor-not-allowed";
 
 export const Button = ({
-  text,
+  children,
   onClick,
   type,
   disabled,
@@ -25,7 +27,7 @@ export const Button = ({
       className={`w-full text-base font-serif font-medium uppercase rounded-xl ${buttonType}`}
       onClick={onClick}
     >
-      {text}
+      {children}
     </button>
   );
 };

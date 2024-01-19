@@ -20,11 +20,9 @@ export const Promo = ({ title, text, link, icon }: PromoProps): JSX.Element => {
             {title}
           </h4>
           <p className="text-black text-2xl font-serif font-medium">{text}</p>
-          <Button
-            type="classic"
-            text="Shop"
-            onClick={() => router.push(link)}
-          />
+          <Button type="classic" onClick={() => router.push(link)}>
+            Shop
+          </Button>
         </div>
         <div className="w-full h-full flex items-start justify-center">
           <div className="w-[70%] h-full">{icon}</div>

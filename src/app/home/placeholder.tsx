@@ -15,11 +15,9 @@ export const HomePlaceholder = (): JSX.Element => {
           <p className="text-black text-xl font-serif font-medium">
             Receive updates about new products and promotions
           </p>
-          <Button
-            text="Join mailing list"
-            type="outline"
-            onClick={handleOpen}
-          />
+          <Button type="outline" onClick={handleOpen}>
+            Join mailing list
+          </Button>
           <HomeDialog handleClose={handleClose} isOpen={value} />
         </div>
       </div>

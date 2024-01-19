@@ -60,10 +60,11 @@ export const HomeDialog = ({
               {error && <ErrorMessage>Email must be an email </ErrorMessage>}
               <Button
                 onClick={() => setIsSubmited(true)}
-                text="Subscribe"
                 type="classic"
                 disabled={error || !email}
-              />
+              >
+                Subscribe
+              </Button>
             </>
           )}
         </div>
@@ -85,7 +86,9 @@ const Placeholder = ({ handleClose, email }: PlaceholderProps): JSX.Element => {
         emails to this address
         <span className="font-semibold"> {email}</span>
       </p>
-      <Button onClick={handleClose} text="close" type="outline" />
+      <Button onClick={handleClose} type="outline">
+        Close
+      </Button>
     </>
   );
 };
