@@ -3,11 +3,16 @@ export type LinkType = {
     link: string;
 };
 
-export type TermOfUseType = {
+export type TextDataType = {
     id: number;
     title: string;
     text: string;
 }
+
+export const EMAIL: string = "nyscshoes@gmail.com";
+
+export const EMAIL_VALIDATION_PATTERN: RegExp =
+    /^(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])$/;
 
 export const MY_ACCOUNT_LINKS: LinkType[] = [
     {
@@ -18,7 +23,7 @@ export const MY_ACCOUNT_LINKS: LinkType[] = [
 export const HELP_LINKS: LinkType[] = [
     {
         name: "Shipping",
-        link: "#",
+        link: "/shipping",
     },
 ];
 
@@ -36,7 +41,7 @@ export const LEGAL_LINKS: LinkType[] = [
     },
 ];
 
-export const TERMS_OF_USE_DATA: TermOfUseType[] = [
+export const TERMS_OF_USE_DATA: TextDataType[] = [
     {
         id: 1,
         title: "License to Use the Website",
@@ -84,5 +89,40 @@ export const TERMS_OF_USE_DATA: TermOfUseType[] = [
     },
 ];
 
-export const EMAIL_VALIDATION_PATTERN: RegExp =
-    /^(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])$/;
+export const SHIPPING_INFO_DATA: TextDataType[] = [
+    {
+        id: 1,
+        title: "Delivery Services",
+        text: "We utilize trusted and reputable courier services for both domestic and international shipping to ensure your orders reach you in top condition and on time.",
+    },
+    {
+        id: 2,
+        title: "Processing Time",
+        text: "Orders are typically processed within 1-2 business days. During peak seasons, processing times may vary, but we always strive to dispatch your order as quickly as possible.",
+    },
+    {
+        id: 3,
+        title: "Shipping Costs",
+        text: "Shipping costs are calculated at checkout based on the destination and the chosen shipping method. We offer competitive rates to make your shopping experience more cost-effective.",
+    },
+    {
+        id: 4,
+        title: "Domestic Shipping",
+        text: `For orders within your country, we partner with local courier service for reliable and speedy delivery. You can expect your package to arrive within estimated timeframe.`,
+    },
+    {
+        id: 5,
+        title: "International Shipping",
+        text: "Nysc Shoes proudly offers worldwide shipping. International orders are shipped via international courier service, providing a secure and efficient delivery service. Please note that customs duties and taxes may apply, and customers are responsible for these fees.",
+    },
+    {
+        id: 6,
+        title: "Order Tracking",
+        text: "Once your order is shipped, you will receive a confirmation email with a tracking number. You can use this tracking number to monitor the status and location of your package.",
+    },
+    {
+        id: 7,
+        title: "Returns and Exchanges",
+        text: "If, for any reason, you are not satisfied with your purchase, please refer to our returns and exchanges policy for information on how to initiate a return or exchange.",
+    },
+];

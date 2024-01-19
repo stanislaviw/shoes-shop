@@ -1,4 +1,4 @@
-import { TermOfUseType, TERMS_OF_USE_DATA } from "@/constants/constants";
+import { TextDataType, TERMS_OF_USE_DATA } from "@/constants/constants";
 
 export const TermsOfUse = (): JSX.Element => {
   return (
@@ -29,7 +29,7 @@ export const TermsOfUse = (): JSX.Element => {
 };
 
 type ItemProps = {
-  item: TermOfUseType;
+  item: TextDataType;
 };
 
 const Item = ({ item }: ItemProps): JSX.Element => {
