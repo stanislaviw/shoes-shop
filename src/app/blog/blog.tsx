@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { DataType, BLOG_DATA } from "@/app/blog/data";
+import { ArticleDataType, BLOG_DATA } from "@/app/blog/data";
 
 export const Blog = (): JSX.Element => {
   return (
@@ -21,7 +21,7 @@ export const Blog = (): JSX.Element => {
 };
 
 type ItemProps = {
-  item: DataType;
+  item: ArticleDataType;
 };
 
 const Item = ({ item }: ItemProps): JSX.Element => {

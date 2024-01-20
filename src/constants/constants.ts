@@ -20,6 +20,7 @@ export const MY_ACCOUNT_LINKS: LinkType[] = [
         link: "/sign-in",
     },
 ];
+
 export const HELP_LINKS: LinkType[] = [
     {
         name: "Shipping",
