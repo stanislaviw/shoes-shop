@@ -17,7 +17,7 @@ export const EMAIL_VALIDATION_PATTERN: RegExp =
 export const MY_ACCOUNT_LINKS: LinkType[] = [
     {
         name: "Sign In",
-        link: "#",
+        link: "/sign-in",
     },
 ];
 export const HELP_LINKS: LinkType[] = [
