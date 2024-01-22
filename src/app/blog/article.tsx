@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ArticleDataType, BLOG_DATA } from "@/app/blog/data";
+import { ArticleDataType, ARTCILES_DATA } from "@/app/blog/data";
 import { useRouter } from "next/router";
 
 export const BlogArticle = (): JSX.Element => {
@@ -11,7 +11,7 @@ export const BlogArticle = (): JSX.Element => {
   console.log(data);
 
   useEffect(() => {
-    const data = BLOG_DATA.filter((item) => item.id === id);
+    const data = ARTCILES_DATA.filter((item) => item.id === id);
     setData(data[0]);
   }, [id]);
 

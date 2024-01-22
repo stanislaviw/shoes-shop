@@ -4,7 +4,7 @@ export type ArticleDataType = {
   fullText: string;
 };
 
-export const BLOG_DATA: ArticleDataType[] = [
+export const ARTCILES_DATA: ArticleDataType[] = [
   {
     title: "About us",
     id: "124dfq",

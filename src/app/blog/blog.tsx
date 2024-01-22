@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArticleDataType, BLOG_DATA } from "@/app/blog/data";
+import { ArticleDataType, ARTCILES_DATA } from "@/app/blog/data";
 
 export const Blog = (): JSX.Element => {
   return (
@@ -10,7 +10,7 @@ export const Blog = (): JSX.Element => {
             All Articles:
           </h4>
           <div className="flex gap-[30px] w-full h-full">
-            {BLOG_DATA.map((item) => (
+            {ARTCILES_DATA.map((item) => (
               <Item item={item} key={item.id} />
             ))}
           </div>
