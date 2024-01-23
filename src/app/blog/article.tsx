@@ -10,16 +10,18 @@ export const BlogArticle = (): JSX.Element => {
   const router = useRouter();
   const { id } = router.query;
 
-  console.log(data);
-
   useEffect(() => {
-    const data = ARTCILES_DATA.find((item) => item.id === id);
+    const data: ArticleDataType | undefined = ARTCILES_DATA.find(
+      (item) => item.id === id
+    );
 
     setData(data);
   }, [id]);
 
   useEffect(() => {
-    const articleText = splitTextIntoParagraphs(data?.fullText);
+    const articleText: string[] | undefined = splitTextIntoParagraphs(
+      data?.fullText
+    );
 
     setParagraphs(articleText);
   }, [data]);
@@ -33,7 +35,12 @@ export const BlogArticle = (): JSX.Element => {
           </h4>
           <div className="flex flex-col gap-[30px] w-full h-full">
             {paragraphs?.map((paragraph) => (
-              <p key={uuidv4()}>{paragraph}</p>
+              <p
+                key={uuidv4()}
+                className="text-black text-[24px] font-serif font-medium"
+              >
+                {paragraph}
+              </p>
             ))}
           </div>
         </div>
@@ -47,9 +54,11 @@ const splitTextIntoParagraphs = (
 ): string[] | undefined => {
   if (!text) return undefined;
 
-  const paragraphs = text.split("&&");
+  const paragraphs: string[] = text.split("&&");
 
-  const trimmedParagraphs = paragraphs.map((paragraph) => paragraph.trim());
+  const trimmedParagraphs: string[] = paragraphs.map((paragraph) =>
+    paragraph.trim()
+  );
 
   return trimmedParagraphs;
 };
