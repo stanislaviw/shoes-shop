@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ARTCILES_DATA } from "@/app/blog/data";
+import { ARTICLES_DATA } from "@/app/blog/data";
 import { useRouter } from "next/router";
 import { v4 as uuidv4 } from "uuid";
 import { ArticleDataType } from "@/app/definitions";
@@ -12,7 +12,7 @@ export const BlogArticle = (): JSX.Element => {
   const { id } = router.query;
 
   useEffect(() => {
-    const data: ArticleDataType | undefined = ARTCILES_DATA.find(
+    const data: ArticleDataType | undefined = ARTICLES_DATA.find(
       (item) => item.id === id
     );
 

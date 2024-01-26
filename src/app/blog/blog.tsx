@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ARTCILES_DATA } from "@/app/blog/data";
+import { ARTICLES_DATA } from "@/app/blog/data";
 import { ArticleDataType } from "@/app/definitions";
 
 export const Blog = (): JSX.Element => {
@@ -10,8 +10,8 @@ export const Blog = (): JSX.Element => {
           <h4 className="w-full text-center text-3xl font-sans font-semibold text-black">
             All Articles:
           </h4>
-          <div className="flex gap-[30px] w-full h-full">
-            {ARTCILES_DATA.map((item) => (
+          <div className="flex gap-[30px] w-full h-full flex-wrap">
+            {ARTICLES_DATA.map((item) => (
               <Item item={item} key={item.id} />
             ))}
           </div>
@@ -29,7 +29,7 @@ const Item = ({ item }: ItemProps): JSX.Element => {
   const { id, title } = item;
 
   return (
-    <Link href={`/blog/${id}`} className="w-full h-full">
+    <Link href={`/blog/${id}`} className="w-full">
       <div className="w-full h-full border-[2px] border-light-black rounded-xl flex flex-col overflow-hidden">
         <div className="w-full h-full bg-light-black p-5 text-white text-2xl font-sans font-extrabold">
           {title}

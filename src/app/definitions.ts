@@ -23,3 +23,13 @@ export type TextDataType = {
     title: string;
     text: string;
 };
+
+export type ProductType = {
+    id: string;
+    model: string;
+    brand: string;
+    cost: number;
+    category: string;
+    description: string;
+    sizes: number[];
+}
