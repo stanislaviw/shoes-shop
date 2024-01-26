@@ -1,4 +1,5 @@
-import { TextDataType, TERMS_OF_USE_DATA } from "@/constants/constants";
+import { TERMS_OF_USE_DATA } from "@/constants/constants";
+import { TextDataType } from "@/app/definitions";
 
 export const TermsOfUse = (): JSX.Element => {
   return (

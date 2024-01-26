@@ -6,7 +6,7 @@ type PromoProps = {
   title: string;
   text: string;
   link: string;
-  icon: ReactNode;
+  icon?: ReactNode;
 };
 
 export const Promo = ({ title, text, link, icon }: PromoProps): JSX.Element => {

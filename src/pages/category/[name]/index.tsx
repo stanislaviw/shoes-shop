@@ -1,8 +1,9 @@
+import { Category } from "@/app/category/category";
 import { NextPage } from "next";
 
 const CategoryPage: NextPage = () => (
   <>
-    <div>Category</div>
+    <Category />
   </>
 );
 

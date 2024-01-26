@@ -1,5 +1,8 @@
-import { Documents } from "@/app/definitions";
+import { Categories } from "@/app/definitions";
+import { useState } from "react";
 
 export const Category = (): JSX.Element => {
-  return <div></div>;
+  const [data, setData] = useState<[]>([]);
+
+  return <div>Category</div>;
 };

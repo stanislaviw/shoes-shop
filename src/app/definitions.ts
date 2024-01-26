@@ -7,15 +7,15 @@ export enum Documents {
     TermOfUse = "tos",
 }
 
+export type LinkType = {
+    name: string;
+    link: string;
+};
+
 export type ArticleDataType = {
     title: string;
     id: string;
     fullText: string;
-};
-
-export type LinkType = {
-    name: string;
-    link: string;
 };
 
 export type TextDataType = {
