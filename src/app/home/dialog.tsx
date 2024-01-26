@@ -4,7 +4,7 @@ import { ErrorMessage } from "@/common/error-message";
 import { EMAIL_VALIDATION_PATTERN } from "@/constants/constants";
 import { ChangeEvent, useEffect, useState } from "react";
 
-type HomeDialog = {
+type HomeDialogProps = {
   handleClose: () => void;
   isOpen: boolean;
 };
@@ -12,7 +12,7 @@ type HomeDialog = {
 export const HomeDialog = ({
   handleClose,
   isOpen,
-}: HomeDialog): JSX.Element => {
+}: HomeDialogProps): JSX.Element => {
   const [email, setEmail] = useState<string>("");
   const [error, setError] = useState<boolean>(false);
   const [isSubmited, setIsSubmited] = useState<boolean>(false);

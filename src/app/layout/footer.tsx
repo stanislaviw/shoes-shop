@@ -2,7 +2,6 @@ import {
   ABOUT_LINKS,
   HELP_LINKS,
   LEGAL_LINKS,
-  LinkType,
   MY_ACCOUNT_LINKS,
 } from "@/constants/constants";
 import FacebookIcon from "@/app/assets/facebook.svg";
@@ -10,6 +9,7 @@ import InstagramIcon from "@/app/assets/instagram.svg";
 import LinkedinIcon from "@/app/assets/linkedin.svg";
 import TwitterIcon from "@/app/assets/twitter.svg";
 import Link from "next/link";
+import { LinkType } from "@/app/definitions";
 
 const date = new Date();
 const year = date.getFullYear();

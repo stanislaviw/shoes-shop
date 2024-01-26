@@ -1,13 +1,10 @@
 import { useRouter } from "next/router";
 import { TermsOfUse } from "@/app/docs/terms-of-use";
-
-enum DocPages {
-  TermOfUse = "tos",
-}
+import { Documents } from "@/app/definitions";
 
 export const Docs = (): JSX.Element => {
   const router = useRouter();
   const { type } = router.query;
 
-  return <>{DocPages.TermOfUse === type && <TermsOfUse />}</>;
+  return <>{Documents.TermOfUse === type && <TermsOfUse />}</>;
 };

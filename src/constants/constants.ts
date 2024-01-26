@@ -1,13 +1,4 @@
-export type LinkType = {
-    name: string;
-    link: string;
-};
-
-export type TextDataType = {
-    id: number;
-    title: string;
-    text: string;
-}
+import { LinkType, TextDataType } from "@/app/definitions";
 
 export const EMAIL: string = "nyscshoes@gmail.com";
 

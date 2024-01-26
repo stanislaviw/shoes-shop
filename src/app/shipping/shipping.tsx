@@ -1,4 +1,5 @@
-import { TextDataType, SHIPPING_INFO_DATA, EMAIL } from "@/constants/constants";
+import { SHIPPING_INFO_DATA, EMAIL } from "@/constants/constants";
+import { TextDataType } from "@/app/definitions";
 import Link from "next/link";
 
 export const Shipping = (): JSX.Element => {

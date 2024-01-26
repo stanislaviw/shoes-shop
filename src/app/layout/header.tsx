@@ -2,12 +2,12 @@ import Link from "next/link";
 import BagIcon from "@/app/assets/shopping-bag.svg";
 import { useRouter } from "next/router";
 
-type Routes = {
+type RouteType = {
   link: string;
   name: string;
 };
 
-const ROUTES: Routes[] = [
+const ROUTES: RouteType[] = [
   {
     link: "/",
     name: "Home",

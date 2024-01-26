@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { ArticleDataType, ARTCILES_DATA } from "@/app/blog/data";
+import { ARTCILES_DATA } from "@/app/blog/data";
 import { useRouter } from "next/router";
 import { v4 as uuidv4 } from "uuid";
+import { ArticleDataType } from "@/app/definitions";
 
 export const BlogArticle = (): JSX.Element => {
   const [data, setData] = useState<ArticleDataType | undefined>(undefined);

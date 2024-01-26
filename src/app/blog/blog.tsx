@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { ArticleDataType, ARTCILES_DATA } from "@/app/blog/data";
+import { ARTCILES_DATA } from "@/app/blog/data";
+import { ArticleDataType } from "@/app/definitions";
 
 export const Blog = (): JSX.Element => {
   return (
